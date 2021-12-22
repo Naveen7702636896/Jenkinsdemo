@@ -7,7 +7,7 @@ pipeline{
          sages{
                 stage("Git Checkout"){
                 steps{
-                      git credentialsId: 'javahome2', url: 'https://github.com/url/myweb.git'
+                    git credentialsId: 'Hello', url: 'https://github.com/Naveen7702636896/Jenkinsdemo.git'
                       }
                 }
           stage("Maven Build"){
