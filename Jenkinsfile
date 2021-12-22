@@ -18,11 +18,11 @@ pipeline{
                                 }
           stage("deploy dev"){
                              steps{
-                                   sshagent(['tomcat-new]){ // in jenkins goto --> snippet Generator ---> in sample step select ssh agent--->credentials---> select ssh username with private key-->id name: tomcat-new--> username (ec2-user) --->key(paste pem.key of tomcat server)--->generate pipeline script.
+                                   sshagent(['Tomcat-server']){
                                    sh """
-                                   scp -o StrictHostKeyChecking-no target/myweb.war ec2-user@172.31.38.118:/home/ec2-user/apache-tomcat-9.0.46/webapps/ [//tomcat instance private ip]
-                                   ssh ec2-user@172.31.38.118:/home/ec2-user/apache-tomcat-9.0.46/shutdown.sh
-                                   ssh ec2-user@172.31.38.118:/home/ec2-user/apache-tomcat-9.0.46/startup.sh
+                                   scp -o StrictHostKeyChecking-no target/myweb.war ubuntu@172.31.47.97:/home/ubuntu/apache-tomcat-8.5.73/webapps/
+                                   ssh ubuntu@172.31.47.97:/home/ubuntu/apache-tomcat-8.5.73/shutdown.sh
+                                   ssh ubuntu@172.31.47.97:/home/ubuntu/apache-tomcat-8.5.73/startup.sh
                                    """
                                    }
                                 }
