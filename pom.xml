@@ -32,7 +32,8 @@
 	<build>
 		<plugins>
 		<build>
-    <plugins>
+  </build> -->
+	<plugins>
         <!-- START Of Plugins -->
         <!-- MAVEN COMPILER PLUGIN -->
         <plugin>
@@ -51,7 +52,7 @@
 				<artifactId>spring-boot-maven-plugin</artifactId>
 			</plugin>
 		</plugins>
-	</build> -->
+	
 	
 
 </project>
