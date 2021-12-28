@@ -4,7 +4,7 @@ pipeline{
         environment{
                     PATH = "/opt/maven3/bin:$PATH"
                     }
-         sages{
+         stages{
                 stage("Git Checkout"){
                 steps{
                     git credentialsId: 'Hello', url: 'https://github.com/Naveen7702636896/Jenkinsdemo.git'
