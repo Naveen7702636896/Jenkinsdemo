@@ -31,18 +31,27 @@
 
 	<build>
 		<plugins>
-			<plugin>
+		<build>
+    <plugins>
+        <!-- START Of Plugins -->
+        <!-- MAVEN COMPILER PLUGIN -->
+        <plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-compiler-plugin</artifactId>
+            <version>3.3</version>
+            <configuration>
+                <source>1.7</source>
+                <target>1.7</target>
+            </configuration>
+        </plugin>
+        <!-- END Of Plugins -->
+    </plugins>
+</build>	<plugin>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
 			</plugin>
 		</plugins>
 	</build> -->
-	<pluginRepositories>
-	    <pluginRepository>    
-		<id>maven1</id>
-		<name>Maven.org</name>
-		<url>http://repo1.maven.org/maven3</url>
-	    </pluginRepository>
-	</pluginRepositories>
+	
 
 </project>
